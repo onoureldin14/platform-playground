@@ -93,7 +93,7 @@ resource "aws_instance" "k8s_node" {
   subnet_id              = data.aws_subnet.default.id
 
   tags = {
-    Name = "platform-playground-master-node"
+    Name = local.aws_instance_name
   }
 }
 
